@@ -3,20 +3,19 @@
 ![image](https://github.com/user-attachments/assets/0b636e8a-dbfa-43ee-b011-17aea282f192)
 
 
-
-Welcome to the **All-In-One Terminal**! This is a custom terminal interface designed to integrate various functionalities into one streamlined tool. It is currently in alpha, meaning that features are being added regularly.
+Welcome to the **All-In-One Terminal**! This is a custom terminal interface designed to integrate various functionalities into one streamlined tool. It is currently in alpha, meaning that features are being added regularly. This project was created purely for fun!
 
 ## Features
 
 The All-In-One Terminal offers the following commands:
 
 - `-e`: Exit the terminal.
-- `-g`: Access a variety of games(only one right now).
-- `-u`: Fetch all links from a website.
+- `-g`: Access a variety of games.
+- `-u`: Fetch links from the internet.
 - `-k`: Start a keylogger for monitoring key inputs.
 - `-stopkeylogger`: Stop the keylogger if it’s running.
 - `-color`: Change the terminal's color scheme.
-- `-color list`: Display a list of available colors.
+- `-list`: Display a list of available colors.
 
 ## Usage
 
