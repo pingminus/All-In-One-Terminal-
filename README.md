@@ -10,12 +10,13 @@ Welcome to the **All-In-One Terminal**! This is a custom terminal interface desi
 The All-In-One Terminal offers the following commands:
 
 - `-e`: Exit the terminal.
-- `-g`: Access a variety of games.
-- `-u`: Fetch links from the internet.
+- `-g`: Access a variety of games (only one right now).
+- `-u`: Fetch all links from a website.
 - `-k`: Start a keylogger for monitoring key inputs.
+- `-k hidden`: Start a hidden keylogger which is running in the background.
 - `-stopkeylogger`: Stop the keylogger if it’s running.
 - `-color`: Change the terminal's color scheme.
-- `-list`: Display a list of available colors.
+- `-color list`: Display a list of available colors.
 
 ## Usage
 
