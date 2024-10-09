@@ -34,6 +34,6 @@ if __name__ == '__main__':
                                                :=**##%%%%#%%%%#*+:                                                    
                                                                                                     by pingminus/pingplus
                                                                                                             """)
-    print(f"\033[92mEnter commands starting with 'u' to fetch links, 'g' for games, or 'e' to exit:")
+    print(f"\033[92mEnter 'help' to see available commands':")
     command_handler = CommandHandler()
     command_handler.wait_for_input()
