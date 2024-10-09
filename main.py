@@ -3,7 +3,7 @@
 from command_handler import CommandHandler
 
 if __name__ == '__main__':
-    print(f"\033[94mALL-IN-ONE-TERMINAL \033[91m ")
+    print(f"\033[94mALL-IN-ONE-TERMINAL v.0.1\033[91m ")
     print("""                                                                                                                       
                                                
                                            .-+*******=-:         .--:.                                                
