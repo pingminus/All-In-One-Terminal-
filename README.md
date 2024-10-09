@@ -1,6 +1,7 @@
 # All-In-One Terminal
 
-![image](https://github.com/user-attachments/assets/0b636e8a-dbfa-43ee-b011-17aea282f192)
+![preview](https://github.com/user-attachments/assets/32ec2d63-6601-4adb-98d4-22499d066e53)
+
 
 
 Welcome to the **All-In-One Terminal**! This is a custom terminal interface designed to integrate various functionalities into one streamlined tool. It is currently in alpha, meaning that features are being added regularly. This project was created purely for fun!
