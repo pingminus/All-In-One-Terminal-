@@ -26,4 +26,4 @@ To get started with the All-In-One Terminal, clone the repository and run the te
 ```bash
 git clone https://github.com/yourusername/all-in-one-terminal.git
 cd all-in-one-terminal
-python terminal.py
+python main.py
