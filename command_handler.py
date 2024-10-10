@@ -42,12 +42,12 @@ class CommandHandler:
 
     def display_help(self):
         """Display help commands."""
-        print()
-        print("     -e       Exit                   -g       Games")
-        print("     -u       LinkFetcher            -k       Start Key Logger")
-        print("     -stopkeylogger Stop Key Logger  -k       hidden Key Logger")  # Help for stopping key logger
-        print("     -color   Change Color")
-        print("       -list  Color List")
+            print()
+            print("     -e              Exit                   -g              Games")
+            print("     -u              LinkFetcher            -k              Start Key Logger")
+            print("     -stopkeylogger  Stop Key Logger        -k hidden       hidden Key Logger")  # Help for stopping key logger
+            print("     -color          Change Color")
+            print("       -list  Color List")
 
     def fetch_links(self, URL):
         """Fetch and display links from a URL."""
