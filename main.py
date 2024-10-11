@@ -3,7 +3,7 @@
 from command_handler import CommandHandler
 
 if __name__ == '__main__':
-    print(f"\033[94mALL-IN-ONE-TERMINAL v.0.1.2\033[91m ")
+    print(f"\033[94mALL-IN-ONE-TERMINAL v.0.1.4\033[91m ")
     print("""                                                                                                                       
                                                
                                            .-+*******=-:         .--:.                                                
@@ -32,7 +32,7 @@ if __name__ == '__main__':
                                      :#####*******************:  -***#%#-                                             
                                          :*#%%###***************##%%#*                                                
                                                :=**##%%%%#%%%%#*+:                                                    
-                                                                                                    by pingminus/pingplus
+                                                                                                by pingminus/pingplus
                                                                                                             """)
     print(f"\033[92mEnter 'help' to see available commands':")
     command_handler = CommandHandler()

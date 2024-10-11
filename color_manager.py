@@ -1,4 +1,5 @@
 # color_manager.py
+
 from logging import exception
 
 # ANSI escape codes for colors
