@@ -1,10 +1,12 @@
 #command_handler.py
+from logging import exception
+from pickle import TUPLE1
 
 from color_manager import ColorManager
 from link_fetcher import LinkFetcher
 from tic_tac_toe import TicTacToe
 from key_logger import KeyLogger  # Import the KeyLogger class
-
+from Timer import Timer
 
 class CommandHandler:
     """Handle user input and commands."""
@@ -13,6 +15,7 @@ class CommandHandler:
         self.color_manager = ColorManager()
         self.key_logger = None  # Initialize the key logger as None
         self.hidden_key_logger = None  # For the hidden key logger
+        self.timer = Timer()
 
     def wait_for_input(self):
         while True:
@@ -22,11 +25,16 @@ class CommandHandler:
             if user_input==("e"):  # Exit condition
                 print(f"Exiting...")  # Color persists
                 break
-            elif self.isCalculation(user_input):
+            elif self.isCalculation(user_input)==True and user_input.find('https:/')==-1:
                 self.perform_Calculation(user_input)
 
             elif user_input.startswith("h"):
                 self.display_help()
+            elif user_input.startswith("i"):
+                print("This is a custom Terminal like application v.0.1.4")
+                print("by https://github.com/pingminus")
+            elif user_input=="t":
+               self.timer.runTimer()
             elif user_input.startswith("u"):
                 URL = user_input[1:].strip()  # Get the URL after 'u'
                 self.fetch_links(URL)
@@ -71,8 +79,12 @@ class CommandHandler:
     def isCalculation(self, user_input):
         return any(op in user_input for op in ["/","*", "+", "-"])
     def perform_Calculation(self, user_input):
-        result = eval(user_input)
-        print(f"{result}")
+        try :
+            result = eval(user_input)
+            print(f"{result}")
+        except exception as e:
+            print(f"{e}")
+
     def start_hidden_key_logger(self):
         """Start the hidden key logger in a background thread."""
         if not self.hidden_key_logger:  # Check if no hidden key logger is running
