@@ -21,6 +21,9 @@ The All-In-One Terminal offers the following commands:
 - `-color`: Change the terminal's color scheme.
 - `-color list`: Display a list of available colors.
 
+Berform basic calculations inside the terminal  
+![image](https://github.com/user-attachments/assets/4644f808-9a3c-4b30-bfa9-1e737ae97ee2)
+
 
 
 ## Usage
