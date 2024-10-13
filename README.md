@@ -30,7 +30,7 @@ Berform basic calculations inside the terminal
 
 ## Usage
 
-To get started with the All-In-One Terminal, clone the repository and run the terminal script:
+To get started with the All-In-One Terminal, clone the repository and run the main.py:
 
 ```bash
 git clone https://github.com/yourusername/all-in-one-terminal.git
