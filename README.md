@@ -4,7 +4,7 @@
 
 
 
-Welcome to the **All-In-One Terminal**! This is a custom terminal interface designed to integrate various functionalities into one streamlined tool. It is currently in alpha, meaning that features are being added regularly. This project was created purely for fun!
+Welcome to the **All-In-One Terminal**! This is a custom terminal interface designed to integrate various functionalities into one streamlined tool. This project was created purely for fun and to combine smaller python projects into one project!
 
 ## Features
 
