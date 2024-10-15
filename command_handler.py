@@ -31,7 +31,9 @@ class CommandHandler:
             elif user_input.startswith("h"):
                 self.display_help()
             elif user_input.startswith("i"):
+                self.printName()
                 print("This is a custom Terminal like application v.0.1.4")
+                print("Just some small python projects combined in one")
                 print("by https://github.com/pingminus")
             elif user_input=="t":
                self.timer.runTimer()
@@ -55,8 +57,8 @@ class CommandHandler:
         print("     -e              Exit                   -g              Games")
         print("     -u              LinkFetcher            -k              Start Key Logger")
         print("     -stopkeylogger  Stop Key Logger        -k hidden       hidden Key Logger")  # Help for stopping key logger
-        print("     -color          Change Color")
-        print("       -list  Color List")
+        print("     -color          Change Color           -t              Timer")
+        print("       -list  Color List                    -i              Information")
 
     def fetch_links(self, URL):
         """Fetch and display links from a URL."""
@@ -82,8 +84,8 @@ class CommandHandler:
         try :
             result = eval(user_input)
             print(f"{result}")
-        except exception as e:
-            print(f"{e}")
+        except Exception as e:
+            print(f"Error:{e}")
 
     def start_hidden_key_logger(self):
         """Start the hidden key logger in a background thread."""
@@ -121,12 +123,21 @@ class CommandHandler:
             "dark_green", "dark_blue", "dark_red",
             "dark_yellow", "light_magenta", "light_cyan"
         ]
+        try:
         # Split the user input and check if the second part is in colorList
-        color_command = user_input.split()[1]  # Get the color command
-        if color_command.startswith("list"):
-            for color in colorList:
-                print(f"{self.color_manager.current_color}{color}")
-        elif color_command in colorList:  # Check if the color_command is valid
-            self.color_manager.set_color(color_command)  # Set the color
-        else:
-            print(f"{self.color_manager.current_color}Invalid color! Please choose from: {', '.join(colorList)}")
+            color_command = user_input.split()[1]  # Get the color command
+            if color_command.startswith("list"):
+                for color in colorList:
+                    print(f"{self.color_manager.current_color}{color}")
+            elif color_command in colorList:  # Check if the color_command is valid
+                self.color_manager.set_color(color_command)  # Set the color
+            else:
+                print(f"{self.color_manager.current_color}Invalid color! Please choose from: {', '.join(colorList)}")
+        except Exception as e:
+            print(f"Error: {e}")
+
+    def printName(self):
+        print("\033[38;2;255;0;0m" + "┌─┐┬┌┐┌┌─┐┌─┐┬  ┬ ┬┌─┐")  # Red
+        print("\033[38;2;255;80;0m" + "├─┘│││││ ┬├─┘│  │ │└─┐")  # More orange
+        print("\033[38;2;255;165;0m" + "┴  ┴┘└┘└─┘┴  ┴─┘└─┘└─┘")  # Full orange
+        print("\033[0m")  # Reset terminal color
