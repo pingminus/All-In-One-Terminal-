@@ -1,6 +1,6 @@
 # All-In-One Terminal
 
-![preview](https://github.com/user-attachments/assets/32ec2d63-6601-4adb-98d4-22499d066e53)
+![preview](![image](https://github.com/user-attachments/assets/8463352e-77ec-4536-a00b-1ba5a62371d2))
 
 
 
