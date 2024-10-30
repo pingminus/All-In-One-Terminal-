@@ -59,6 +59,7 @@ def printCoolStyledMouse():
 
 
 if __name__ == '__main__':
+    print("\033[38;2;0;0;255mAll-In-One Terminal v.0.1.4\033[0m")
     printCoolStyledMouse()
     print(f"\033[92mEnter 'help' to see available commands':")
     command_handler = CommandHandler()
